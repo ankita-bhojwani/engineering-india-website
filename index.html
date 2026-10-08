@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering India CCOEW</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <a href="#home" class="logo">
+    <img src="logo.png" alt="Engineering India CCOEW logo">
+</a>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#team">Our Team</a>
+        <a href="#voices">Voices</a>
+        <a href="#faq">FAQ</a>
+        <a href="#feedback">Feedback</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <p class="eyebrow">ENGINEERING INDIA • CCOEW</p>
+        <h1>Where Ideas Meet <span>Impact.</span></h1>
+        <p>A journey of leadership, learning, creativity, community and engineering excellence.</p>
+        <div class="hero-buttons">
+            <a href="#events" class="btn primary">Explore Our Journey</a>
+            <a href="#about" class="btn secondary">Discover EI</a>
+        </div>
+    </div>
+    <div class="scroll-text">SCROLL TO EXPLORE ↓</div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section about">
+    <div class="section-heading">
+        <p>WHO WE ARE</p>
+        <h2>Engineering India CCOEW</h2>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-text">
+            <p>Engineering India is a student-driven platform that brings together leadership, creativity, technical learning and social responsibility.</p>
+            <p>Through events, initiatives, workshops and community activities, Engineering India provides students with opportunities to learn beyond the classroom and contribute meaningfully to society.</p>
+            <p>The magazine reflects a journey filled with experiences, collaboration, leadership and memories created throughout the year.</p>
+        </div>
+
+        <div class="about-highlight">
+            <div class="number-card">
+                <span>01</span>
+                <h3>LEARN</h3>
+                <p>Developing skills through meaningful experiences.</p>
+            </div>
+            <div class="number-card">
+                <span>02</span>
+                <h3>LEAD</h3>
+                <p>Building confidence through responsibility.</p>
+            </div>
+            <div class="number-card">
+                <span>03</span>
+                <h3>CONNECT</h3>
+                <p>Creating communities through collaboration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FEATURE ================= -->
+<section class="feature-section">
+    <div class="feature-image">
+        <img src="images/abhyudaya.jpg" alt="Abhyudaya 25.0">
+    </div>
+    <div class="feature-content">
+        <p class="eyebrow">FEATURED</p>
+        <h2>Abhyudaya 25.0</h2>
+        <p>Abhyudaya brings together students through a diverse range of activities, competitions and experiences, celebrating creativity, talent and participation.</p>
+        <a href="#events" class="text-link">Explore Abhyudaya →</a>
+    </div>
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+<section id="events" class="section">
+    <div class="section-heading">
+        <p>OUR EXPERIENCES</p>
+        <h2>Events & Initiatives</h2>
+        <span>Moments that shaped the Engineering India journey.</span>
+    </div>
+
+    <div class="event-filter">
+        <button class="filter-btn active" onclick="filterEvents('all')">All</button>
+        <button class="filter-btn" onclick="filterEvents('social')">Social</button>
+        <button class="filter-btn" onclick="filterEvents('technical')">Technical</button>
+        <button class="filter-btn" onclick="filterEvents('learning')">Learning</button>
+    </div>
+
+    <div class="events-grid">
+
+        <article class="event-card" data-category="social">
+            <div class="event-image"><img src="images/abhyudaya.jpg" alt="Abhyudaya 25.0"></div>
+            <div class="event-content">
+                <span>FEATURED EVENT</span>
+                <h3>Abhyudaya 25.0</h3>
+                <p>A celebration of talent, creativity, participation and student experiences.</p>
+                <button onclick="openEvent('abhyudaya')">Read More →</button>
+            </div>
+        </article>
+
+        <article class="event-card" data-category="social">
+            <div class="event-image"><img src="images/campus.jpg" alt="Campus Chronicles"></div>
+            <div class="event-content">
+                <span>SOCIAL EVENTS</span>
+                <h3>Campus Chronicles</h3>
+                <p>A collection of experiences and activities from campus life.</p>
+                <button onclick="openEvent('campus')">Read More →</button>
+            </div>
+        </article>
+
+        <article class="event-card" data-category="social">
+            <div class="event-image"><img src="images/bhaktisangam.jpg" alt="Bhaktisangam"></div>
+            <div class="event-content">
+                <span>SOCIAL EVENT</span>
+                <h3>Bhaktisangam</h3>
+                <p>An evening celebrating devotion, music, positivity and togetherness.</p>
+                <button onclick="openEvent('bhaktisangam')">Read More →</button>
+            </div>
+        </article>
+
+        <article class="event-card" data-category="learning">
+            <div class="event-image"><img src="images/orientation.jpg" alt="Orientation Programme"></div>
+            <div class="event-content">
+                <span>LEADERSHIP</span>
+                <h3>Orientation Programme</h3>
+                <p>Introducing coordinators to their roles, responsibilities and the journey ahead.</p>
+                <button onclick="openEvent('orientation')">Read More →</button>
+            </div>
+        </article>
+
+        <article class="event-card" data-category="learning">
+            <div class="event-image"><img src="images/biodiversity.jpg" alt="Biodiversity Park"></div>
+            <div class="event-content">
+                <span>LEARNING JOURNEY</span>
+                <h3>Biodiversity Park</h3>
+                <p>A refreshing experience focused on nature, teamwork and connection.</p>
+                <button onclick="openEvent('biodiversity')">Read More →</button>
+            </div>
+        </article>
+
+        <article class="event-card" data-category="technical">
+            <div class="event-image"><img src="images/industry.jpg" alt="Industry Visit"></div>
+            <div class="event-content">
+                <span>TECHNICAL</span>
+                <h3>Industry Visit</h3>
+                <p>An opportunity to understand industry, entrepreneurship and emerging technologies.</p>
+                <button onclick="openEvent('industry')">Read More →</button>
+            </div>
+        </article>
+
+        <article class="event-card" data-category="social">
+            <div class="event-image"><img src="images/seva.jpg" alt="Seva Sankalp 2.0"></div>
+            <div class="event-content">
+                <span>COMMUNITY</span>
+                <h3>Seva Sankalp 2.0</h3>
+                <p>An initiative centred around community service, connection and meaningful interaction.</p>
+                <button onclick="openEvent('seva')">Read More →</button>
+            </div>
+        </article>
+
+        <article class="event-card" data-category="social">
+            <div class="event-image"><img src="images/diwali.jpg" alt="Diwali Milan"></div>
+            <div class="event-content">
+                <span>SOCIAL EVENT</span>
+                <h3>Diwali Milan</h3>
+                <p>A celebration of warmth, togetherness, traditions and shared memories.</p>
+                <button onclick="openEvent('diwali')">Read More →</button>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section id="achievements" class="section achievements">
+    <div class="section-heading">
+        <p>CELEBRATING TALENT</p>
+        <h2>Winners of Abhyudaya from CCOEW</h2>
+        <span>Celebrating students who showcased their talent and excellence.</span>
+    </div>
+
+    <div class="winner-grid">
+        <div class="winner-card">
+            <h3>Akriti</h3>
+            <span>Creative Find</span>
+            <p>Winner in the Creative Find activity, with Arya Sangevar as runner-up.</p>
+        </div>
+        <div class="winner-card">
+            <h3>Sabya Shanti</h3>
+            <span>Brush and Beyond</span>
+            <p>Winner of the Brush and Beyond painting contest.</p>
+        </div>
+        <div class="winner-card">
+            <h3>Treasure Hunt</h3>
+            <span>Winner</span>
+            <p>The treasure hunt brought participants together through teamwork and collaboration.</p>
+        </div>
+        <div class="winner-card">
+            <h3>Gauri Narlawar</h3>
+            <span>Guest Lecture</span>
+            <p>Shared her experience and reflections from Abhyudaya.</p>
+        </div>
+        <div class="winner-card">
+            <h3>Vaishnavi Thakre & Group</h3>
+            <span>Silver Screen</span>
+            <p>Recognised for storytelling and creative digital expression.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= VOICES ================= -->
+<section id="voices" class="section voices">
+    <div class="section-heading">
+        <p>VOICES OF EXPERIENCE</p>
+        <h2>What the Journey Meant</h2>
+    </div>
+
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            <p>"I truly enjoyed being a part of Engineering India. It gave me the opportunity to step out of my comfort zone and take on responsibilities."</p>
+            <h4>Madhura Joshi</h4>
+            <span>Class of 2026</span>
+        </div>
+        <div class="testimonial">
+            <p>"It's not just about events or work—it's about the support, laughter and memories we create together."</p>
+            <h4>Riddhi Ganeshani</h4>
+            <span>Class of 2027</span>
+        </div>
+        <div class="testimonial">
+            <p>"The engineering events have been an excellent platform to showcase technical, creative and teamwork skills."</p>
+            <h4>Sharry Harde</h4>
+            <span>Class of 2027</span>
+        </div>
+        <div class="testimonial">
+            <p>"Abhyudaya was a well-organized and impactful event that beautifully presented the theme of Panchatantra."</p>
+            <h4>Sharvari Bhinge</h4>
+            <span>Class of 2028</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= TEAM ================= -->
+<section id="team" class="section team">
+    <div class="section-heading">
+        <p>THE PEOPLE BEHIND THE JOURNEY</p>
+        <h2>Team of EI CCOEW</h2>
+    </div>
+
+   <div class="team-grid">
+    <div class="team-member"><div class="team-photo"><img src="images/team/riddhi-ganeshani.jpg" alt="Riddhi Ganeshani"></div><h3>Riddhi Ganeshani</h3><p>College Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/rohini-dambhare.jpg" alt="Rohini Dambhare"></div><h3>Rohini Dambhare</h3><p>Club Head</p></div>
+
+    <div class="team-member"><div class="team-photo"><img src="images/team/sejal-patalbanshi.jpg" alt="Sejal Patalbanshi"></div><h3>Sejal Patalbanshi</h3><p>Secretary</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/divya-bhandakkar.jpg" alt="Divya Bhandakkar"></div><h3>Divya Bhandakkar</h3><p>Secretary</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/preet-madan.jpg" alt="Preet Madan"></div><h3>Preet Madan</h3><p>Secretary</p></div>
+
+    <div class="team-member"><div class="team-photo"><img src="images/team/parinita-motlag.jpg" alt="Parinita Motlag"></div><h3>Parinita Motlag</h3><p>Literature Head</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/triveni-dhawankar.jpg" alt="Triveni Dhawankar"></div><h3>Triveni Dhawankar</h3><p>Literature Co-Head</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/vaishnavi-wagh.jpg" alt="Vaishnavi Wagh"></div><h3>Vaishnavi Wagh</h3><p>Literature Co-Head</p></div>
+
+    <div class="team-member"><div class="team-photo"><img src="images/team/nikita-bisen.jpg" alt="Nikita Bisen"></div><h3>Nikita Bisen</h3><p>Social Media Head</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/mrunali-deshkar.jpg" alt="Mrunali Deshkar"></div><h3>Mrunali Deshkar</h3><p>Social Media Co-Head</p></div>
+
+    <div class="team-member"><div class="team-photo"><img src="images/team/shravani-wadhankar.jpg" alt="Shravani Wadhankar"></div><h3>Shravani Wadhankar</h3><p>Technical Co-Head</p></div>
+
+    <div class="team-member"><div class="team-photo"><img src="images/team/vaidehi-aher.jpg" alt="Vaidehi Aher"></div><h3>Vaidehi Aher</h3><p>Videography &amp; Photography Head</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/anshula-patil.jpg" alt="Anshula Patil"></div><h3>Anshula Patil</h3><p>Videography &amp; Photography Co-Head</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/ankita-bhojwani.jpg" alt="Ankita Bhojwani"></div><h3>Ankita Bhojwani</h3><p>Videography &amp; Photography Co-Head</p></div>
+
+    <div class="team-member"><div class="team-photo"><img src="images/team/shrishti-sharma.jpg" alt="Shrishti Sharma"></div><h3>Shrishti Sharma</h3><p>Designing &amp; Database Head</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/vaishnavi-thakre.jpg" alt="Vaishnavi Thakre"></div><h3>Vaishnavi Thakre</h3><p>Designing &amp; Database Co-Head</p></div>
+
+    <div class="team-member"><div class="team-photo"><img src="images/team/arya-sangewar.jpg" alt="Arya Sangewar"></div><h3>Arya Sangewar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/aarya-bhalerao.jpg" alt="Aarya Bhalerao"></div><h3>Aarya Bhalerao</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/monali-bhelkar.jpg" alt="Monali Bhelkar"></div><h3>Monali Bhelkar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/ojasvi-bodhane.jpg" alt="Ojasvi Bodhane"></div><h3>Ojasvi Bodhane</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/oshni-shirasao.jpg" alt="Oshni Shirasao"></div><h3>Oshni Shirasao</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/pallavi-pawar.jpg" alt="Pallavi Pawar"></div><h3>Pallavi Pawar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/parinita-dhenge.jpg" alt="Parinita Dhenge"></div><h3>Parinita Dhenge</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/samiksha-dharme.jpg" alt="Samiksha Dharme"></div><h3>Samiksha Dharme</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/sayee-sohoni.jpg" alt="Sayee Sohoni"></div><h3>Sayee Sohoni</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/sharvari-bhange.jpg" alt="Sharvari Bhange"></div><h3>Sharvari Bhange</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/shrushti-bhoyar.jpg" alt="Shrushti Bhoyar"></div><h3>Shrushti Bhoyar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/soniya-nimbalkar.jpg" alt="Soniya Nimbalkar"></div><h3>Soniya Nimbalkar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/supriya-talwekar.jpg" alt="Supriya Talwekar"></div><h3>Supriya Talwekar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/vaishnavi-mamulkar.jpg" alt="Vaishnavi Mamulkar"></div><h3>Vaishnavi Mamulkar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/shubhada-vaidya.jpg" alt="Shubhada Vaidya"></div><h3>Shubhada Vaidya</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/amrutha-goje.jpg" alt="Amrutha Goje"></div><h3>Amrutha Goje</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/abha-medpilwar.jpg" alt="Abha Medpilwar"></div><h3>Abha Medpilwar</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/anushka-vaidya.jpg" alt="Anushka Vaidya"></div><h3>Anushka Vaidya</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/ojaswi-madke.jpg" alt="Ojaswi Madke"></div><h3>Ojaswi Madke</h3><p>Coordinator</p></div>
+    <div class="team-member"><div class="team-photo"><img src="images/team/manaswi-mankar.jpg" alt="Manaswi Mankar"></div><h3>Manaswi Mankar</h3><p>Coordinator</p></div>
+</div>
+</section>
+
+
+<!-- ================= LEARNING ================= -->
+<section class="learning">
+    <div class="learning-content">
+        <p class="eyebrow">JOURNEY OF LEARNING</p>
+        <h2>Growing Beyond the Classroom</h2>
+        <p>Engineering India's Coordinator Development Plan focuses on developing the next generation of engineering leaders through workshops, community service, industrial visits, cultural experiences and skill development.</p>
+
+        <div class="learning-list">
+            <span>Career Related Workshop</span>
+            <span>Skill Development</span>
+            <span>Critical Thinking</span>
+            <span>Spiritual Workshop</span>
+            <span>Seva Karya</span>
+            <span>Industrial Visit</span>
+            <span>Vividha Darshan</span>
+            <span>One Day Skill Development Camp</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= HOW WE CAN HELP YOU ================= -->
+<section id="help" class="section help">
+    <div class="section-heading">
+        <p>WHAT WE OFFER</p>
+        <h2>How We Can Help You</h2>
+        <span>Your growth as an engineer is our priority.</span>
+    </div>
+
+    <div class="acc-list">
+        <div class="acc-item open">
+            <button class="acc-btn" type="button"><h3>Technical Excellence</h3><span class="arrow">↓</span></button>
+            <div class="acc-panel"><p>Build real experience through project-based learning and specialised workshops led by industry professionals.</p></div>
+        </div>
+        <div class="acc-item">
+            <button class="acc-btn" type="button"><h3>Soft Skills &amp; Leadership</h3><span class="arrow">↓</span></button>
+            <div class="acc-panel"><p>Grow your communication, leadership and management abilities by organising events and taking on lead roles.</p></div>
+        </div>
+        <div class="acc-item">
+            <button class="acc-btn" type="button"><h3>Industrial Exposure</h3><span class="arrow">↓</span></button>
+            <div class="acc-panel"><p>Meet industry leaders and alumni through networking summits and career guidance sessions.</p></div>
+        </div>
+        <div class="acc-item">
+            <button class="acc-btn" type="button"><h3>Social Impact &amp; Community</h3><span class="arrow">↓</span></button>
+            <div class="acc-panel"><p>Put your skills to work for society by joining social hackathons and donation drives.</p></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+<section class="section gallery">
+    <div class="section-heading">
+        <p>MEMORIES</p>
+        <h2>Gallery</h2>
+    </div>
+
+    <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="">
+        <img src="images/gallery2.jpg" alt="">
+        <img src="images/gallery3.jpg" alt="">
+        <img src="images/gallery4.jpg" alt="">
+        <img src="images/gallery5.jpg" alt="">
+        <img src="images/gallery6.jpg" alt="">
+    </div>
+</section>
+
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section faq">
+    <div class="section-heading">
+        <p>GOT QUESTIONS?</p>
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="acc-btn" type="button"><h3>What is Engineering India?</h3><span class="arrow">→</span></button>
+            <div class="acc-panel"><p>Engineering India is a social and technical club that runs events, workshops, competitions and social initiatives to strengthen students' technical skills and social awareness.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="acc-btn" type="button"><h3>How can I join Engineering India?</h3><span class="arrow">→</span></button>
+            <div class="acc-panel"><p>Any student of the college can join. Membership drives are held at the start of each academic year, and you can also contact the club team directly.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="acc-btn" type="button"><h3>What types of events does the club organize?</h3><span class="arrow">→</span></button>
+            <div class="acc-panel"><p>The club hosts a wide mix of activities: cultural events, technical workshops, coding competitions, hackathons, guest lectures, industry visits and social outreach programmes.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="acc-btn" type="button"><h3>Are there any membership fees?</h3><span class="arrow">→</span></button>
+            <div class="acc-panel"><p>No. The club is open to everyone, and members can take part in all activities and events free of charge.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="acc-btn" type="button"><h3>In what domain can I volunteer?</h3><span class="arrow">→</span></button>
+            <div class="acc-panel"><p>Volunteers can help with event organisation, technical teams, literature, photography, designing and more. Speak to any club head or coordinator to share your interest.</p></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FEEDBACK (GOOGLE FORM) ================= -->
+<section id="feedback" class="section feedback">
+    <div class="section-heading">
+        <p>WE'RE LISTENING</p>
+        <h2>Share Your Feedback</h2>
+        <span>Your thoughts matter. Tell us how we can make Engineering India even better.</span>
+    </div>
+
+    <div class="form-box">
+        <iframe id="feedbackFrame" title="Feedback form" loading="lazy">Loading…</iframe>
+        <p id="formNote" class="form-note"></p>
+    </div>
+
+    <div class="form-open">
+        <a id="formLink" class="btn primary" href="#" target="_blank" rel="noopener">Open Form in a New Tab</a>
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-logo">
+        ENGINEERING INDIA
+        <span>CCOEW</span>
+    </div>
+    <p>Engineering India CCOEW</p>
+    <p class="copyright">© 2026 Engineering India CCOEW. All rights reserved.</p>
+</footer>
+
+
+<!-- ================= EVENT MODAL ================= -->
+<div id="eventModal" class="modal">
+    <div class="modal-content">
+        <button class="close" onclick="closeEvent()">×</button>
+        <p id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <div id="modalDescription"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
